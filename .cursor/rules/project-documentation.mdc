@@ -1,0 +1,20 @@
+---
+description: Mandatory Russell AI News documentation and phase boundaries
+alwaysApply: true
+---
+
+# قواعد اجباری پروژه Russell AI News
+
+پیش از ارائه plan، ایجاد فایل، تغییر معماری یا نوشتن کد، باید `README.md` و تمام فایل‌های `docs/01` تا `docs/04` کامل خوانده شوند. تمام تصمیم‌های پیاده‌سازی باید با این مستندات سازگار باشند. فقط فازی اجرا شود که کاربر صراحتاً درخواست کرده است و تا زمان تأیید کاربر نباید وارد فاز بعد شد.
+
+- provider فعال پروژه فقط `GeminiProvider` است.
+- برای Gemini فقط از SDK رسمی `google-genai` استفاده کن؛ package قدیمی `google-generativeai` ممنوع است.
+- نام مدل Gemini باید از settings/environment خوانده شود و در منطق برنامه hard-code نشود.
+- تست‌های عادی نباید به اینترنت، Gemini یا API واقعی وابسته باشند.
+- secretها، API keyها و محتوای حساس نباید وارد Git، log یا پیام خطای نمایشی شوند.
+- توسعه دقیقاً مطابق فازهای `docs/03-implementation-roadmap.md` انجام شود.
+- معیار پایان هر فاز و Definition of Done در `docs/04-coding-agent-guide.md` رعایت شود.
+- پیش از هر تغییر، وضعیت Git و فایل‌های موجود بررسی و تغییرات نامرتبط کاربر حفظ شوند.
+- در صورت تعارض کد و مستندات، تعارض را پیش از ادامه به کاربر گزارش کن.
+- پس از پایان هر فاز، تست، lint و type check همان فاز را اجرا و نتیجه را گزارش کن؛ سپس منتظر تأیید کاربر بمان.
+
